@@ -1,0 +1,3 @@
+Step 1: run pdf_to_image.py file to convert the pdf data into image
+Step 2: run python auto.py and get the predicted cell and actual data  Note first change the location where the annoted.txt file is present
+step 3: Check the prediction by running predictionCheck.py file     go to the bottom of this file and replace the image PATH
