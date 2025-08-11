@@ -13,7 +13,7 @@ def auto_identify_labels(annotations):
     # Header = class with highest boxes (minimum y-center)
     header_class = min(remaining, key=lambda c: min(b[1] for b in annotations[c]))
     
-    # Data = remaining classes
+    # Data = remaining classes   
     data_class = [c for c in remaining if c != header_class][0] if len(remaining) > 1 else header_class
     
     return {"table": table_class, "header": header_class, "data": data_class}
@@ -98,4 +98,5 @@ try:
         f.write(result)
     print(f"\nSuccessfully saved to output_file.txt")
 except Exception as e:
+
     print(f"\nError saving file: {str(e)}")
